@@ -1,0 +1,21 @@
+﻿<Window x:Class="WpfGui.WindowBoxes.ConfirmDeleteWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:WpfGui.WindowBoxes"
+        mc:Ignorable="d"
+        Title="ConfirmDeleteWindow" Closing="UpdateWindow_Closing" Height="120" Width="344">
+    <Grid >
+        <StackPanel VerticalAlignment="Center" HorizontalAlignment="Center">
+            <TextBlock Text="Действительно удалить запись?" Margin="10"/>
+            <StackPanel  Orientation="Horizontal" VerticalAlignment="Top"  HorizontalAlignment="Center">
+                <TextBlock x:Name="ErrorTextBlock" Visibility="Collapsed" VerticalAlignment="Center" HorizontalAlignment="Center" Foreground="#FFF10505" FontWeight="Bold" />
+            </StackPanel>
+            <StackPanel Orientation="Horizontal" HorizontalAlignment="Center">
+                <Button Content="Нет" Width="75" Margin="5" Click="CancelButton_Click" />
+                <Button Content="Да" Width="75" Margin="5" Click="ConfirmButton_Click"/>
+            </StackPanel>
+        </StackPanel>
+    </Grid>
+</Window>
